@@ -6,7 +6,7 @@ library('dada2')
 amplicons <- c('NTD', 'RBD', 'S1S2')
 # for each amplicon, load all files using glob to collect files from all dates
 for (amplicon in amplicons) {
-    files <- Sys.glob(paste0('/Users/rosekantor/data/wbe_scv/qb3_sgene_*/results/dada2_out/', amplicon, '_dada2_out.csv'), dirmark = FALSE)
+    files <- Sys.glob(paste0('/Users/rosekantor/data/wbe_scv/*_sgene_*/results/dada2_out/', amplicon, '_dada2_out.csv'), dirmark = FALSE)
 
     # make an empty vector of the correct length to hold all the seqtabs as they are read in
     seqtabs <- vector("list", length(files))
